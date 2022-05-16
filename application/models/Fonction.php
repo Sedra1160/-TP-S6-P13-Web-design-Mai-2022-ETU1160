@@ -22,19 +22,7 @@ class Fonction extends CI_Model {
         foreach ($query->result_array() as $row){
             $list[] = $row;
         }
-        // var_dump($list);
         return $list;
-        // $data = array (
-        //     'etat' => '0'
-        // );
-        // $this->db->select('*');
-        // $this->db->from('simpleuser');
-        // $this->db->where($data);
-        // $query = $this->db->get();
-        // $array = $query->row_array();
-        // var_dump($this->db->last_query());
-        // var_dump($array);
-        // return $array;
     }
     
     function traitementInscription($nom,$prenom,$email,$mdp){
@@ -49,10 +37,68 @@ class Fonction extends CI_Model {
         );
         $this->db->insert('simpleuser',$data);
     }
+    function insertContenue($idCat,$titre,$description,$photo){
+        if($idCat =! null){
+            $data = array(
+                'idCategorie' =>   $idCat,
+                'titre' => $titre,
+                'description' => $description,
+                'photo' => $photo
+            );
+            $this->db->insert('contenue',$data);
+        }
+        else{
+            $idCat = 1;
+            $data = array(
+                'idCategorie' =>   $idCat,
+                'titre' => $titre,
+                'description' => $description,
+                'photo' => $photo
+            );
+            $this->db->insert('contenue',$data);
+        }
+        
+    }
     function updateEtatUser($id){
         $this->db->set('etat',1);
         $this->db->where('id',$id);
         $this->db->update('simpleuser');
+    }
+    function listeCategorie (){
+        $req = "select * from categorie";
+        $query = $this->db->query($req);
+        foreach ($query->result_array() as $row ){
+            $list[] = $row;
+        }
+        return $list;
+    }
+    function listeContenue(){
+        $req = "select * from contenue";
+        $query = $this->db->query($req);
+        $list = array();
+        foreach ($query->result_array() as $row){
+            $list[] = $row;
+        }
+        return $list;
+    }
+    function listeContenueTitre($titre){
+        $req = "select * from contenue where url='".$titre."'";
+        // var_dump($req);
+        $query = $this->db->query($req);
+        $list = array();
+        foreach ($query->result_array() as $row){
+            $list[] = $row;
+        }
+        return $list[0];
+    }
+    function listeCommentaire(){
+        $req = "select * from commentaire";
+        $query = $this->db->query($req);
+        $list = array();
+        foreach ($query->result_array() as $row){
+            $list[] = $row;
+        }
+        return $list;
     }
   
 }

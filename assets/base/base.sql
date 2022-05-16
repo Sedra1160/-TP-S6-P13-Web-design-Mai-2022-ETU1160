@@ -55,6 +55,17 @@ values
 ('Jack Saprow','User.png','Tout le monde doivent proteger le fond marin.'),
 ('Capitaine Boby','User.png','Luttons ensemble contre la deforestation.'); 
 
+create table contenue(
+    id int not null auto_increment,
+    idCategorie int,
+    titre varchar(255),
+    description varchar(500),
+    photo varchar(255) default "terre.jpg",
+    url varchar(255),
+    primary key (id),
+    foreign key (idCategorie) references categorie(id)
+);
+
 create table contenue (
     id int not null auto_increment,
     idCategorie int,
@@ -72,6 +83,6 @@ values
 (2,'Hausse des températures','Dans la quasi-totalité des régions terrestres, les journées très chaudes et les vagues de chaleur se multiplient. L année 2020 a été l’une des plus chaudes jamais enregistrées. La hausse des températures provoque une augmentation des maladies liées à la chaleur et peut rendre le travail et les déplacements plus difficiles. En outre, les incendies de forêt démarrent plus facilement et se propagent plus vite lorsque les températures sont plus élevées.','rechauffement-climatique-7.jpg'),
 (2,'Accroissement de la gravité des tempêtes','Les changements de température occasionnent à leur tour des changements dans les précipitations. Cela se traduit par des tempêtes plus violentes et plus fréquentes, susceptibles de provoquer des inondations et des glissements de terrain, de détruire des maisons et des communautés, et de coûter des milliards de dollars.','tempete.jpg'),
 (2,'Accroissement des sécheresses','De plus en plus de régions sont confrontées à une pénurie d’eau. Les sécheresses peuvent provoquer des tempêtes de sable et de poussière destructrices, capables de déplacer des milliards de tonnes de sable à travers les continents. Avec la désertification, les terres cultivables voient également leur surface se réduire. Aujourd’hui, de nombreuses personnes sont exposées au risque de manquer d’eau.','shutterstock_640413589-800x450.jpg'),
-(3,' Modifions nos habitudes alimentaires','Pour limiter l’impact de notre alimentation sur le climat, privilégions autant que possible les fruits et légumes de saison. En effet, ils génèrent en moyenne 7 fois mois de GES que les produits cultivés sous des serres chauffées. De nombreux calendriers de fruits et légumes de saison sont disponibles pour nous guider dans nos achats.','terre.jpg'),
+(3,'Modifions nos habitudes alimentaires','Pour limiter l’impact de notre alimentation sur le climat, privilégions autant que possible les fruits et légumes de saison. En effet, ils génèrent en moyenne 7 fois mois de GES que les produits cultivés sous des serres chauffées. De nombreux calendriers de fruits et légumes de saison sont disponibles pour nous guider dans nos achats.','terre.jpg'),
 (3,'Luttons contre la déforestation','Certains labels garantissent une gestion durable des forêts. En achetant des produits (papier, meubles, etc.) portant le label Forest Stewardship Council (FSC) ou Programme Européen des Forêts Certifiées (PEFC), nous pouvons contribuer à la préservation des forêts et limiter ainsi les émissions anthropiques de GES.','838_photo2.jpg'),
 (3,'Préservons les océans','Pour lutter contre le changement climatique, nous devons préserver les océans. Pour cela, chacun de nous peut agir au quotidien. Par exemple, nous pouvons acheter des produits ménagers respectueux de l’environnement afin d’éviter de déverser des produits chimiques polluants dans les océans.','terre.jpg');

@@ -108,7 +108,7 @@
                 </div>
               </div>
               <div class="card-body">
-                <form role="form" class="text-start" action="<?php echo site_url('Acceuil/traitementLogin') ?>" method="post">
+                <form role="form" class="text-start" action="<?php echo site_url('AccueilAdmin/traitementLogin') ?>" method="post">
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Email</label>
                     <input type="email" class="form-control" name="email">
