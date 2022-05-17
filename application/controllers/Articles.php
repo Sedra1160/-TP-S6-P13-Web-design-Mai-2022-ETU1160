@@ -16,6 +16,9 @@ class Articles extends CI_Controller {
 		if($url == $data['contenueInd']['url']){
 			$this->load->view('ficheArticle',$data);
 		}
+		if($url =! $data['contenueInd']['url']){
+			$this->load->view('article');
+		}
 		
 	}	
 }

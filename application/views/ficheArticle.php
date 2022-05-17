@@ -46,7 +46,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="#" class="nav-item nav-link active">Accueil</a>
+                        <a href="<?php echo site_url('AccueilFront'); ?>" class="nav-item nav-link active">Accueil</a>
                         <a href="<?php echo site_url('Articles'); ?>" class="nav-item nav-link">Articles</a>
                         <a href="#" class="nav-item nav-link">Commentaire</a>
                         <a href="#" class="nav-item nav-link">Contact</a>
@@ -74,7 +74,6 @@
 
         <!-- fiche article -->
         <div class="card" style="width: 18rem;">
-        <?php echo $contenueInd['photo']  ?>
         <img class="card-img-top" src="<?php echo img_url($contenueInd['photo']) ?>" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $contenueInd['titre']; ?></h5>

@@ -34,13 +34,6 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div> -->
-        <!-- Spinner End -->
 
 
         <!-- Navbar & Hero Start -->
@@ -54,7 +47,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="#" class="nav-item nav-link active">Accueil</a>
+                        <a href="<?php echo site_url('AccueilFront'); ?>" class="nav-item nav-link active">Accueil</a>
                         <a href="<?php echo site_url('Articles'); ?>" class="nav-item nav-link">Articles</a>
                         <a href="#" class="nav-item nav-link">Commentaire</a>
                         <a href="#" class="nav-item nav-link">Contact</a>
@@ -143,7 +136,7 @@
                                     <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
                                     <div class="ps-4">
                                         <p class="mb-0">Popular</p>
-                                        <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                        <h6 class="text-uppercase mb-0">Peuple</h6>
                                     </div>
                                 </div>
                             </div>
@@ -248,10 +241,10 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
+                        <h5 class="text-light fw-normal">notre site est toujour ouvert</h5>
+                        <p>24/24</p>
+                        <h5 class="text-light fw-normal">notre site est toujour ouvert</h5>
+                        <p>7/7</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
